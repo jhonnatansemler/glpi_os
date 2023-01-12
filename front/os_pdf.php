@@ -52,7 +52,7 @@ class PDF extends FPDF {
 		// Title - Line 1: Company name & OS
 		$this->Cell(20);
 		$this->SetFont('Arial','B',12);
-		$this->Cell(90,5,utf8_decode(strip_tags(htmlspecialchars_decode("$EmpresaPlugin"))),0,0,'C');
+		/*$this->Cell(90,5,utf8_decode(strip_tags(htmlspecialchars_decode("$EmpresaPlugin"))),0,0,'C');*/
 		$this->Cell(20,5,"",0,0,'C');
 		$this->Cell(33,5,"",0,0,'C');
 
@@ -66,21 +66,21 @@ class PDF extends FPDF {
 
 		// Title - Line 3: Company registration number & Os date
 		$this->Ln();
-		$this->SetFont('Arial','',10);
+		/*$this->SetFont('Arial','',10);
 		$this->SetTextColor(1,0,0);
 		$this->Cell(50);
-		$this->Cell(90,5,"CNPJ: $CnpjPlugin",0,0,'C');
+		$this->Cell(90,5,"CNPJ: $CnpjPlugin",0,0,'C');*/
 		$this->SetFont('Arial','B',14);
 		$this->SetTextColor(250,0,0);
-		$this->Cell(33,5,"$OsId",0,0,'C');
+		$this->Cell(313,5,"$OsId",0,0,'C');
 		$this->SetFont('Arial','',10);
 		$this->SetTextColor(0,0,0);
 		$this->Cell(20,5,"",0,0,'C');
 		$this->Ln();
 		// Title - Line 4: Company address
 		$this->Cell(50);
-		$this->Cell(90,5,utf8_decode(strip_tags(htmlspecialchars_decode("$EnderecoPlugin - $CidadePlugin"))),0,0,'C');
-		$this->Cell(33,5,"$DataOs",0,0,'C');
+		/*$this->Cell(90,5,utf8_decode(strip_tags(htmlspecialchars_decode("$EnderecoPlugin - $CidadePlugin"))),0,0,'C');*/
+		$this->Cell(210,5,"$DataOs",0,0,'C');
 		$this->Cell(20,5,"",0,0,'C');
 		$this->Image('../pics/qr.png',180,10,22);
 		// Title - Line 5: URL
